@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.8 on darwin)" generated="20221023 21:25:40.655" rpa="false" schemaversion="3">
+<suite id="s1" name="CorrectLoginPageDisplay" source="/Users/levi/PycharmProjects/Noona_Automation_Assignmnt/TestCases/CorrectLoginPageDisplay.robot">
+<test id="s1-t1" name="Verify_Login_Page_is_Displayed_Correctly" line="7">
+<kw name="homepage" library="Resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221023 21:25:40.792" level="INFO">Opening browser 'chrome' to base url 'https://demo.patient.noonatest.com/patient/#/login'.</msg>
+<status status="PASS" starttime="20221023 21:25:40.791" endtime="20221023 21:25:43.295"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221023 21:25:43.295" endtime="20221023 21:25:43.428"/>
+</kw>
+<status status="PASS" starttime="20221023 21:25:40.791" endtime="20221023 21:25:43.428"/>
+</kw>
+<kw name="login_display" library="Resources">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221023 21:25:43.429" endtime="20221023 21:25:43.742"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221023 21:25:43.742" endtime="20221023 21:25:43.759"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${PWD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221023 21:25:43.759" endtime="20221023 21:25:43.784"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PWD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221023 21:25:43.784" endtime="20221023 21:25:43.798"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 21:25:45.800" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221023 21:25:43.798" endtime="20221023 21:25:45.801"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 21:25:45.803" level="INFO">Typing text 'noona@noonatest.com' into text field '//input[@id='email']'.</msg>
+<status status="PASS" starttime="20221023 21:25:45.801" endtime="20221023 21:25:45.937"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PWD_INPUT}</arg>
+<arg>${PWD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 21:25:45.938" level="INFO">Typing text '123456' into text field '//input[@id="pwd"]'.</msg>
+<status status="PASS" starttime="20221023 21:25:45.937" endtime="20221023 21:25:46.000"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 21:25:49.001" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221023 21:25:46.000" endtime="20221023 21:25:49.001"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20221023 21:25:49.002" endtime="20221023 21:25:49.052"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${PWD_INPUT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20221023 21:25:49.052" endtime="20221023 21:25:49.090"/>
+</kw>
+<status status="PASS" starttime="20221023 21:25:43.428" endtime="20221023 21:25:49.090"/>
+</kw>
+<kw name="validation_of_Correct_Login_Display" library="Resources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>VN: 7 Date of manufacture: 2022-10-17</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221023 21:25:49.102" level="INFO">Current page contains text 'VN: 7 Date of manufacture: 2022-10-17'.</msg>
+<status status="PASS" starttime="20221023 21:25:49.090" endtime="20221023 21:25:49.102"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//*[@id="login-page"]/div[2]/nh-email-and-password/nh-login-section/div/div/div[1]/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221023 21:25:49.110" level="INFO">Current page contains element '//*[@id="login-page"]/div[2]/nh-email-and-password/nh-login-section/div/div/div[1]/div'.</msg>
+<status status="PASS" starttime="20221023 21:25:49.102" endtime="20221023 21:25:49.110"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="login-page"]/div[4]/nh-ce-mark/div/div[2]/ds-button/button/div/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 21:25:49.110" level="INFO">Clicking element '//*[@id="login-page"]/div[4]/nh-ce-mark/div/div[2]/ds-button/button/div/div'.</msg>
+<status status="PASS" starttime="20221023 21:25:49.110" endtime="20221023 21:25:49.225"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>© 2022 Varian Medical Systems, Inc.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221023 21:25:49.236" level="INFO">Current page contains text '© 2022 Varian Medical Systems, Inc.'.</msg>
+<status status="PASS" starttime="20221023 21:25:49.225" endtime="20221023 21:25:49.237"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>07.05.02</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221023 21:25:49.246" level="INFO">Current page contains text '07.05.02'.</msg>
+<status status="PASS" starttime="20221023 21:25:49.237" endtime="20221023 21:25:49.246"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="close-modal"]/button/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 21:25:49.247" level="INFO">Clicking element '//*[@id="close-modal"]/button/div'.</msg>
+<status status="PASS" starttime="20221023 21:25:49.246" endtime="20221023 21:25:49.281"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221023 21:25:49.281" endtime="20221023 21:25:49.361"/>
+</kw>
+<status status="PASS" starttime="20221023 21:25:49.090" endtime="20221023 21:25:49.362"/>
+</kw>
+<status status="PASS" starttime="20221023 21:25:40.791" endtime="20221023 21:25:49.362"/>
+</test>
+<doc>Automation for Correct Login Page Display</doc>
+<status status="PASS" starttime="20221023 21:25:40.657" endtime="20221023 21:25:49.363"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CorrectLoginPageDisplay">CorrectLoginPageDisplay</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
